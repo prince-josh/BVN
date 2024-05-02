@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Verification Number System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Verification Number System</h1>
+        <div class="form-container">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Enter Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Enter Email" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="input-group">
+                <input type="file" id="photo" accept="image/*" required>
+            </div>
+            <button id="generateBtn">Generate BVN</button>
+            <div id="result"></div>
+            <div id="loading" class="hidden"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+            <button id="printBtn" class="hidden">Print</button>
+        </div>
+    </div>
+    <div id="printContainer" class="hidden">
+        <div class="print-header">
+            <h2>User Information</h2>
+        </div>
+        <div class="print-content">
+            <div class="user-info">
+                <p><strong>Name:</strong> <span id="printName"></span></p>
+                <p><strong>Email:</strong> <span id="printEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="printPhone"></span></p>
+                <p><strong>BVN:</strong> <span id="printBVN"></span></p>
+            </div>
+            <div class="user-photo">
+                <img id="printPhoto" src="" alt="User Photo">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
